@@ -1,0 +1,203 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color:rgb(97, 78, 107);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  padding-top: 30px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+#tasks-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#task{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #0B2447;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.input-container .topline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="number"]:focus ~ .topline {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.input-container .underline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="number"]:focus ~ .underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.input-container input[type="number"]:focus ~ .label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
